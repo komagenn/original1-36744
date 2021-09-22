@@ -1,0 +1,16 @@
+// Place all the styles related to the shifts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.contents_row{
+  width: 100%;
+  text-align: center;
+  background-color: crimson;
+  transform: skewY(-10deg);
+}
+.content_post{
+  margin:40px;
+  font-size:19px;
+}
+.name{
+  color:pink,
+}
