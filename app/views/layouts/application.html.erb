@@ -10,12 +10,22 @@
   </head>
 
  <body>
-    <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6">Shift</h1>
-        <div class="user_nav grid-6">
-          <a class="post" href="/tweets/new">投稿する</a>
-        </div>
+    <header class='top-page-header'>
+     <h1 class="grid-6"> <%= link_to image_tag('aikon1.png', size: '45x45'), "/" %>Shift </h1>
+      <div class="user_nav">
+       <ul class='lists-right'>
+         <% if user_signed_in? %>
+          <li>
+              <%= link_to "#{current_user.nick_name}",user_path(current_user), class: "user-nick_name" %>
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+          </li>
+         <% else %>
+          <li>
+              <%= link_to 'ログイン', user_session_path, class: "login" %>
+              <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+          </li>
+         <% end %>
+       </ul>
       </div>
     </header>
     <%= yield %>
