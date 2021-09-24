@@ -1,0 +1,47 @@
+<div class ="new_shift">
+ <div class ="main">
+  <div class ="shift_content">
+   <%= form_with model: @shift, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="shift-detail">
+     <div class="weight-main-text">月間シフト申請</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          希望日数
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:work_id, Work.all, :id, :name, {}, {class:"select-box", id:"shift-work"}) %>
+        <div class="weight-bold-text">
+          希望時間
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"shift-hour"}) %>
+         <div class="weight-bold-text">
+          月間希望労働時間合計
+          <span class="indispensable">必須</span>
+         </div>
+         <%= f.collection_select(:sum_id, Sum.all, :id, :name,{}, {class:"select-box", id:"shift-sum"}) %>
+         
+        
+       <div class="weight-bold-text">
+          希望休日
+          <span class="indispensable">必須</span>
+        <%= f.text_area :holiday, class:"shift-text", id:"holiday" %>
+       </div>
+       <div class="weight-bold-text">
+          備考欄
+          <span class="indispensable">任意</span>
+        <%= f.text_area :remark, class:"shift-text", id:"remark" %>
+       </div>
+      </div>
+       <div class="sell-btn-contents">
+        <%= f.submit "申請する", class:"sell-btn" %>
+        <%= link_to 'もどる', root_path, class:"back-btn" %>
+       </div> 
+     </div>
+    </div>
+   <% end %>
+  </div>
+ </div>
+</div>
+

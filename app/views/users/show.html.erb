@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p><%= @nick_name %>さんの投稿一覧</p>
+  <% @shifts.each do |shift| %>
+    <div class="content_post" style="background-image: url(<%= image_tag 'sunset.jpeg'%>);">
+      <p><%= shift.sum %></p>
+      <span class="name"><%= shift.holiday %></span>
+    </div>
+  <% end %>
+</div>

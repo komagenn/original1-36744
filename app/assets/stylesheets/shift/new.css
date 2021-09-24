@@ -1,0 +1,62 @@
+.new_shift{
+  margin:180px;
+}
+.shift_content{
+  background-color:bisque;
+  width:100%;
+  height: 800px;
+}
+.shift-detail {
+  padding: 2vh 0;
+}
+
+.shift-detail>.form {
+  text-align: center;
+  width: 100%;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+.weight-main-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin: 2vh 0;
+  text-align: center;
+  font-size:32px;
+}
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin: 2vh 0;
+  text-align: center;
+}
+
+.sell-btn {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 98%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+}
+
+.sell-btn-contents{
+  text-align: center;
+}
+.back-btn {
+  background:silver;
+  border: 1px solid #aaa;
+  width: 100%;
+  color: #fff;
+  padding: 15px 46%;
+  text-decoration: none;
+}
+
+.shift-text{
+  width:90%;
+  height:40px;
+  margin: 0 30px;
+}
