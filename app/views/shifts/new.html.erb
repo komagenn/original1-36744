@@ -1,11 +1,17 @@
 <div class ="new_shift">
  <div class ="main">
   <div class ="shift_content">
-   <%= form_with model: @shift, local: true do |f| %>
-    <%= render 'shared/error_messages', model: f.object %>
+  
     <div class="shift-detail">
      <div class="weight-main-text">月間シフト申請</div>
+      <%= form_with model: @shift, local: true do |f| %>
+       <%= render 'shared/error_messages', model: f.object %>
+      
+      
       <div class="form">
+        <div class="google-calender">
+         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&src=M2JjcTY3bWU2Yzc1a2pwYWVuOHFsazd2czBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+       </div>
         <div class="weight-bold-text">
           希望日数
           <span class="indispensable">必須</span>
