@@ -20,7 +20,7 @@ has_one:shift
 |------ ---------------|-----------|-----------|
 |work_id               |integer    |null: false|
 |hour_id               |integer    |null: false|
-|sum                   |integer    |null: false|
+|sum_id                |integer    |null: false|
 |holiday               |text       |null: false|
 |remark                |text       |null: false|
 |user                  |references |null: false|
